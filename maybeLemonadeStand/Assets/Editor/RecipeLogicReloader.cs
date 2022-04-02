@@ -10,12 +10,18 @@ public class RecipeLogicReloader : Editor
     {
         Debug.Log("Reloading Recipes...");
 
-        RecipeLogic.allRecipes = new List<Recipe>();
+        List<Recipe> recipes = new List<Recipe>();
+
+        //RecipeLogic.allRecipes = new List<Recipe>();
         foreach(var recipe in Resources.LoadAll("Recipes", typeof(Recipe)))
         {
-            RecipeLogic.allRecipes.Add(recipe as Recipe);
+            //RecipeLogic.allRecipes.Add(recipe as Recipe);
+            recipes.Add(recipe as Recipe);
             Debug.Log(recipe);
         }
+
+        RecipeDataList newDatalist = new RecipeDataList(recipes);
+        JSONEditor.DataToJSON(newDatalist, "RecipeDatalist");
 
         Debug.Log("All recipes reloaded.");
     }

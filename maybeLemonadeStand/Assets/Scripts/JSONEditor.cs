@@ -8,58 +8,62 @@ public static class JSONEditor
     /// <summary>
     /// If JSON save data exists, pull and load it. Else make new save data
     /// </summary>
-    public static SaveData JSONToSaveData()
+    public static T JSONToData<T>(string fileName)
     {
-        if (File.Exists(Application.persistentDataPath + "/gamedata.json"))
+        if (File.Exists(Application.persistentDataPath + "/" + fileName + ".json"))
         {
             // get from file
-            var file = File.ReadAllText(Application.persistentDataPath + "/gamedata.json");
-            SaveData data = JsonUtility.FromJson<SaveData>(file);
+            var file = File.ReadAllText(Application.persistentDataPath + "/" + fileName + ".json");
+            T data = JsonUtility.FromJson<T>(file);
             return data;
         }
         else
         {
             // form default data
-            return new SaveData();
+            return default(T);
         }
     }
 
     /// <summary>
     /// Convert SaveData to JSON and save to persistentDataPath
     /// </summary>
-    public static string SaveDataToJSON(SaveData data)
+    public static string DataToJSON<T>(T data, string fileName)
     {
         var json = JsonUtility.ToJson(data);
-        File.WriteAllText(Application.persistentDataPath + "/gamedata.json", json);
+        File.WriteAllText(Application.persistentDataPath + "/" + fileName + ".json", json);
 
         return json;
     }
 
-    public static SaveData DeleteSaveData()
+    public static void DeleteData(string fileName)
     {
-        if (File.Exists(Application.persistentDataPath + "/gamedata.json"))
+        if (File.Exists(Application.persistentDataPath + "/" + fileName + ".json"))
         {
             // get from file
-            File.Delete(Application.persistentDataPath + "/gamedata.json");
+            File.Delete(Application.persistentDataPath + "/" + fileName + ".json");
         }
-        // form default data
-        return new SaveData();
     }
 }
 
 [System.Serializable]
 public class SaveData
 {
-    public List<LevelStats> allLevelData;
+    public string truckName = "Seven";
 
     public SaveData()
     {
-        allLevelData = new List<LevelStats>();
+        // nothing
     }
 }
 
 [System.Serializable]
-public class LevelStats
+public class RecipeDataList
 {
-    public string truckName = "Seven"; 
+    public List<Recipe> allRecipes;
+
+    public RecipeDataList(List<Recipe> recipes)
+    {
+        allRecipes = new List<Recipe>();
+        foreach (var recipe in recipes) allRecipes.Add(recipe);
+    }
 }
