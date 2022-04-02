@@ -9,14 +9,17 @@ public class IngredientLogicReloader : Editor
     public static void ReloadIngredients()
     {
         Debug.Log("Reloading Ingredients...");
+        string runningList = "Ingredients: ";
 
         List<Ingredient> ingredients = new List<Ingredient>();
 
         foreach (var ingredient in Resources.LoadAll("Ingredients", typeof(Ingredient)))
         {
             ingredients.Add(ingredient as Ingredient);
-            Debug.Log(ingredient);
+            runningList += (ingredient.name + ", ");
         }
+
+        Debug.Log(runningList);
 
         IngredientDataList newDatalist = new IngredientDataList(ingredients);
         JSONEditor.DataToJSON(newDatalist, "IngredientDatalist");
