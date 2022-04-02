@@ -12,7 +12,7 @@ public class RecipeUILoader : MonoBehaviour
 
     public GameObject toggleImg;
 
-    Recipe myRecipe;
+    public Recipe myRecipe;
     bool isRunningLogic = false;
 
     public void LoadUI(Recipe recipe)
@@ -38,7 +38,7 @@ public class RecipeUILoader : MonoBehaviour
         toggle.onValueChanged.AddListener((state) => {
             if (isRunningLogic) return;
             isRunningLogic = true;
-
+            Debug.Log("HERE");
             state = menu.UpdateMenu(state, recipe);
             toggle.isOn = state;
             toggleImg?.SetActive(state);

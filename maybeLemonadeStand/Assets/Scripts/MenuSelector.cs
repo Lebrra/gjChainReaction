@@ -44,9 +44,35 @@ public class MenuSelector : MonoBehaviour
 
     void UpdateMenuLogic()
     {
+        List<Ingredient> tempIngredients = new List<Ingredient>();
+        foreach (var item in ingredientListInst)
+        {
+            if (item.amount > 0) tempIngredients.Add(item.ingredient);
+        }
+
         foreach (var recipe in allToggles)
         {
+            if (recipe.isOn) continue;
 
+            bool recipeValid = true;
+            foreach (var ingredient in recipe.GetComponent<RecipeUILoader>().myRecipe.ingredients)
+            {
+                if (!tempIngredients.Contains(ingredient))
+                {
+                    recipeValid = false;
+                    break;
+                }
+            }
+
+            if (recipeValid)
+            {
+                recipe.interactable = true;
+            }
+            else
+            {
+                recipe.interactable = false;
+                recipe.transform.SetAsLastSibling();
+            }
         }
     }
 
@@ -55,12 +81,12 @@ public class MenuSelector : MonoBehaviour
         bool state = updatedState;
         if (!updatedState)
         {
-            if (menuList.Contains(recipe)) RemovePurchasedIngredients(recipe);
+            if (menuList.Contains(recipe)) AddPurchasedIngredients(recipe);
         }
         else
         {
             state = menuList.Count < 3;
-            if (state && !menuList.Contains(recipe)) AddPurchasedIngredients(recipe);
+            if (state && !menuList.Contains(recipe)) RemovePurchasedIngredients(recipe);
         }
         UpdateMenuLogic();
         return state;
@@ -85,7 +111,7 @@ public class MenuSelector : MonoBehaviour
                 }
             }
         }
-        menuList.Remove(recipe);
+        menuList.Add(recipe);
     }
 
     void AddPurchasedIngredients(Recipe recipe)
@@ -107,6 +133,6 @@ public class MenuSelector : MonoBehaviour
                 }
             }
         }
-        menuList.Add(recipe);
+        menuList.Remove(recipe);
     }
 }

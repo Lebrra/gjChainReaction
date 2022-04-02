@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     {
         if (instance) Destroy(gameObject);
         else instance = this;
+
+        StartNewDay();
     }
 
     public void StartNewDay()
