@@ -15,6 +15,30 @@ public static class RecipeLogic
         return datalist.allRecipes;
     }
 
+    public static List<Recipe> GetMenuOptions(List<Ingredient> ingredients)
+    {
+        List<Recipe> allRecipes = GetRecipeList();
+        List<Recipe> menuOptions = new List<Recipe>();
+
+        foreach(var recipe in allRecipes)
+        {
+            bool hasAllIngredients = true;
+            foreach(var recIngred in recipe.ingredients)
+            {
+                if (!ingredients.Contains(recIngred))
+                {
+                    hasAllIngredients = false;
+                    break;
+                }
+            }
+
+            if (hasAllIngredients) menuOptions.Add(recipe);
+        }
+
+        return menuOptions;
+    }
+
+
     static List<Recipe> GenerateDatalistJSON()
     {
         Debug.Log("Reloading Recipes...");
