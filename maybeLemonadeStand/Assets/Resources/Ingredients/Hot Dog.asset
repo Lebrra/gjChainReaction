@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Hot Dog
   m_EditorClassIdentifier: 
   buyPrice: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: -4225847980436267344, guid: 2d19cd3bb5929964e824229e4a367907, type: 3}

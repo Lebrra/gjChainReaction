@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Lemons
   m_EditorClassIdentifier: 
   buyPrice: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 8dc81013bbf66a643abebed924c40277, type: 3}
