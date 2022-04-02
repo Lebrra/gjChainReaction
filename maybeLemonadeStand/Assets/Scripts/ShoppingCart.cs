@@ -38,7 +38,7 @@ public class ShoppingCart : MonoBehaviour
         chosenProductAmount = 0;
         totalAmount = 0;
 
-        SetUpShop();
+        //SetUpShop();
     }
 
     private void Update()
@@ -149,6 +149,7 @@ public class ShoppingCart : MonoBehaviour
 
     public void FinalizePurchase()
     {
+        GameManager.instance.SendPurchases(totalAmount, cart);
         //STUFF
     }
 

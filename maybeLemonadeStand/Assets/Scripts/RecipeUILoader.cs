@@ -10,7 +10,10 @@ public class RecipeUILoader : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI ingredientText;
 
+    public GameObject toggleImg;
+
     Recipe myRecipe;
+    bool isRunningLogic = false;
 
     public void LoadUI(Recipe recipe)
     {
@@ -23,5 +26,25 @@ public class RecipeUILoader : MonoBehaviour
             ingredients += "- " + ingred.name + "\n";
         }
         ingredientText.text = ingredients;
+        myRecipe = recipe;
+    }
+
+    public void LoadUI(Recipe recipe, MenuSelector menu)
+    {
+        LoadUI(recipe);
+
+        var toggle = GetComponent<Toggle>();
+        toggle.enabled = true;
+        toggle.onValueChanged.AddListener((state) => {
+            if (isRunningLogic) return;
+            isRunningLogic = true;
+
+            state = menu.UpdateMenu(state, recipe);
+            toggle.isOn = state;
+            toggleImg?.SetActive(state);
+
+            isRunningLogic = false;
+            });
+
     }
 }
