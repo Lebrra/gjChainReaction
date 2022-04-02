@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
         else instance = this;
 
         StartNewDay();
+
+        Debug.Log(Calendar.DateToString(Calendar.GetDate(1700)));
+        Debug.Log(Calendar.DateToString(Calendar.GetDate(45)));
+        Debug.Log(Calendar.DateToString(Calendar.GetDate(4)));
     }
 
     public void StartNewDay()
