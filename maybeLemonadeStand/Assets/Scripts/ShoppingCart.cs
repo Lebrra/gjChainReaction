@@ -51,8 +51,10 @@ public class ShoppingCart : MonoBehaviour
     public void DisplayItem(Ingredient ingredient)
     {
         chosenProduct = ingredient;
+        chosenProductImage.gameObject.SetActive(true);
         chosenProductImage.sprite = ingredient.sprite;
         chosenProductPriceText.text = ("Price: $" + ingredient.buyPrice.ToString() + " ea.");
+        chosenProductAmount = 1;
     }
 
     public void AddOneToCart()
@@ -101,6 +103,7 @@ public class ShoppingCart : MonoBehaviour
     {
         chosenProduct = null;
         chosenProductImage.sprite = null;
+        chosenProductImage.gameObject.SetActive(false);
         chosenProductPriceText.text = ("Price: ");
     }
 
