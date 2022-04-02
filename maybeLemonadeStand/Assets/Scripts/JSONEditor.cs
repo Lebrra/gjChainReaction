@@ -67,3 +67,15 @@ public class RecipeDataList
         foreach (var recipe in recipes) allRecipes.Add(recipe);
     }
 }
+
+[System.Serializable]
+public class IngredientDataList
+{
+    public List<Ingredient> allRecipes;
+
+    public IngredientDataList(List<Ingredient> ingredients)
+    {
+        allRecipes = new List<Ingredient>();
+        foreach (var ingredient in ingredients) allRecipes.Add(ingredient);
+    }
+}
