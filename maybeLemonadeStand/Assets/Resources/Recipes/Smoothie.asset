@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sellPrice: 0
   sprite: {fileID: 0}
-  ingredients: []
-  quanity: 0
+  ingredients:
+  - {fileID: 11400000, guid: c035a073dfeea944cad87e38b734c080, type: 2}
+  - {fileID: 11400000, guid: 7a05917518d8aff4386489347dfbb213, type: 2}
+  requiredAppliance: 0
+  sunRate: 1.3
+  rainRate: 1
+  windRate: 0.8
+  snowRate: 0.5

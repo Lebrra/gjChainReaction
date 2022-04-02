@@ -17,4 +17,8 @@ MonoBehaviour:
   ingredients:
   - {fileID: 11400000, guid: 3bfb8b01d68fa87448e6cf89f4e766d8, type: 2}
   - {fileID: 11400000, guid: e342d79765f0b744c97fa015429919dc, type: 2}
-  quanity: 0
+  requiredAppliance: 0
+  sunRate: 2
+  rainRate: 0.8
+  windRate: 1
+  snowRate: 0.2
