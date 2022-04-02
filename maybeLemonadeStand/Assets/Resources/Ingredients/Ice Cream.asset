@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 901f48f140386c940a7d4fc9cc0b7264, type: 3}
-  m_Name: Tomato
+  m_Name: Ice Cream
   m_EditorClassIdentifier: 
-  buyPrice: 1
-  sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  buyPrice: 0
+  sprite: {fileID: 0}

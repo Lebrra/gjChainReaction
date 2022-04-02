@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7b7b7e419f7b540989c9fa768083d3, type: 3}
-  m_Name: Ketchup
+  m_Script: {fileID: 11500000, guid: 901f48f140386c940a7d4fc9cc0b7264, type: 3}
+  m_Name: Potatoes
   m_EditorClassIdentifier: 
-  sellPrice: 1000
+  buyPrice: 0
   sprite: {fileID: 0}
-  ingredients:
-  - {fileID: 11400000, guid: a9d3bd0fac285fa4a988465d1fd17fc3, type: 2}
-  - {fileID: 11400000, guid: 9b04b36d220078c458ec482b92ca0da1, type: 2}
-  quanity: 0
