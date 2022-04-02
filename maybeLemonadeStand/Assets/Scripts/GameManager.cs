@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public ShoppingCart shoppingSystem;
     public MenuSelector menuSystem;
 
+    [Header("Player Data")]
+    public float bank = 7F;
+    public int dayCounter = 7;
+
     private void Awake()
     {
         if (instance) Destroy(gameObject);
