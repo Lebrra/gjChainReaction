@@ -20,26 +20,17 @@ public class SaveDataManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
 
-            gameData = JSONEditor.JSONToSaveData();
+            gameData = JSONEditor.JSONToData<SaveData>("gameData");
         }
     }
 
-    public LevelStats GetLevelData(int sceneIndex)
-    {
-        if (gameData.allLevelData.Count > sceneIndex) return gameData.allLevelData[sceneIndex];
-        else
-        {
-            // level data not saved yet
-            while (gameData.allLevelData.Count <= sceneIndex)
-            {
-                gameData.allLevelData.Add(new LevelStats());
-            }
-            return gameData.allLevelData[sceneIndex];
-        }
-    }
-
-    public void SaveLevelData(int sceneIndex, LevelStats data)
-    {
-        JSONEditor.SaveDataToJSON(gameData);
-    }
+    //public PlayerSaveData GetSaveData()
+    //{
+    //    return null;
+    //}
+    //
+    //public void SaveLevelData(int sceneIndex, PlayerSaveData data)
+    //{
+    //    JSONEditor.SaveDataToJSON(gameData, "gameData");
+    //}
 }
