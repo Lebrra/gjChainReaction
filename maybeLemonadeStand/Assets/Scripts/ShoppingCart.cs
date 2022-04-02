@@ -10,23 +10,36 @@ public class ShoppingCart : MonoBehaviour
     public Image chosenProductImage;
     public TextMeshProUGUI chosenProductPriceText;
     public TextMeshProUGUI chosenProductAmountText;
+    public TextMeshProUGUI receiptTotalAmountText;
+    public GameObject receiptObject;
+    public GameObject shopObject;
+
+    //Receipt stuff
+    public GameObject productPrefab;
+    public Transform content;
 
     //Keep track of selected amount
     public int chosenProductAmount = 7;
 
     //List of selected items and amount
     public List<CartItem> cart = new List<CartItem>();
+    List<GameObject> uiCardItems = new List<GameObject>();
 
     public Ingredient chosenProduct;
+
+    public float totalAmount = 7;
 
     private void Start()
     {
         chosenProductAmount = 0;
+        totalAmount = 0;
     }
 
     private void Update()
     {
         chosenProductAmountText.text = ("Amount: " + chosenProductAmount);
+
+        receiptTotalAmountText.text = ("Total: $" + totalAmount);
     }
 
     public void DisplayItem(Ingredient ingredient)
@@ -34,7 +47,7 @@ public class ShoppingCart : MonoBehaviour
         chosenProduct = ingredient;
         chosenProductImage.sprite = ingredient.sprite;
         //chosenProductPrice = ingredient.buyPrice;
-        chosenProductPriceText.text = ("Price: " + ingredient.buyPrice.ToString());
+        chosenProductPriceText.text = ("Price: $" + ingredient.buyPrice.ToString());
     }
 
     public void AddOneToCart()
@@ -85,6 +98,56 @@ public class ShoppingCart : MonoBehaviour
         chosenProductImage.sprite = null;
         chosenProductPriceText.text = ("Price: ");
     }
+
+    public void GetReceipt()
+    {
+        shopObject.SetActive(false);
+        receiptObject.SetActive(true);
+
+        BuildReceipt();
+        GetTotal();
+    }
+
+    public void GetTotal()
+    {
+        foreach (CartItem item in cart)
+        {
+            totalAmount += (item.ingredient.buyPrice * item.amount);
+        }
+    }
+
+    public void BuildReceipt()
+    {
+        foreach (CartItem item in cart)
+        {
+            GameObject prefab = Instantiate(productPrefab, content);
+            prefab.GetComponent<ProductLoader>().LoadUI(item);
+
+            uiCardItems.Add(prefab);
+        }
+    }
+
+    public void NotTheBestWayToDoThis()
+    {
+        receiptObject.SetActive(false);
+        shopObject.SetActive(true);
+
+        foreach (GameObject item in uiCardItems)
+        {
+            Destroy(item);
+        }
+
+        uiCardItems.Clear();
+        cart.Clear();
+        totalAmount = 0;
+    }
+
+    public void FinalizePurchase()
+    {
+        //STUFF
+    }
+
+
 }
 
 [System.Serializable]

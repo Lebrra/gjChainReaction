@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Sugar
   m_EditorClassIdentifier: 
   buyPrice: 1
-  sprite: {fileID: 0}
+  sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
