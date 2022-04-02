@@ -287,6 +287,7 @@ MonoBehaviour:
   productName: {fileID: 8602012740766755938}
   productPrice: {fileID: 7683434381675317011}
   productAmount: {fileID: 3946735505023548164}
+  useAmount: 1
 --- !u!1 &3786243968553087583
 GameObject:
   m_ObjectHideFlags: 0

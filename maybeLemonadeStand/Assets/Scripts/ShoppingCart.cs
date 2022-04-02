@@ -18,6 +18,10 @@ public class ShoppingCart : MonoBehaviour
     public GameObject productPrefab;
     public Transform content;
 
+    //Shop Stuff
+    public GameObject shopProductPrefab;
+    public Transform shopContent;
+
     //Keep track of selected amount
     public int chosenProductAmount = 7;
 
@@ -33,6 +37,8 @@ public class ShoppingCart : MonoBehaviour
     {
         chosenProductAmount = 0;
         totalAmount = 0;
+
+        SetUpShop();
     }
 
     private void Update()
@@ -46,8 +52,7 @@ public class ShoppingCart : MonoBehaviour
     {
         chosenProduct = ingredient;
         chosenProductImage.sprite = ingredient.sprite;
-        //chosenProductPrice = ingredient.buyPrice;
-        chosenProductPriceText.text = ("Price: $" + ingredient.buyPrice.ToString());
+        chosenProductPriceText.text = ("Price: $" + ingredient.buyPrice.ToString() + " ea.");
     }
 
     public void AddOneToCart()
@@ -147,7 +152,18 @@ public class ShoppingCart : MonoBehaviour
         //STUFF
     }
 
+    public void SetUpShop()
+    {
+        List<Ingredient> temp = IngredientLogic.GetIngredientList();
 
+        foreach (Ingredient item in temp)
+        {
+            GameObject prefab = Instantiate(shopProductPrefab, shopContent);
+            prefab.GetComponent<ProductLoader>().LoadUI(item, this);
+
+            uiCardItems.Add(prefab);
+        }
+    }
 }
 
 [System.Serializable]
