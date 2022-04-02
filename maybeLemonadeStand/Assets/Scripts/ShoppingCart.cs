@@ -56,6 +56,21 @@ public class ShoppingCart : MonoBehaviour
             temp.ingredient = chosenProduct;
             temp.amount = chosenProductAmount;
 
+           // bool exists = false;
+
+            foreach (CartItem item in cart)
+            {
+                if (item.ingredient.name == temp.ingredient.name)
+                {
+                    //item.amount += chosenProductAmount;
+                    chosenProductAmount += item.amount;
+                    cart.Remove(item);
+                    temp.amount = chosenProductAmount;
+                    //exists = true;
+                    break;
+                }
+            }
+
             cart.Add(temp);
 
             chosenProductAmount = 0;
