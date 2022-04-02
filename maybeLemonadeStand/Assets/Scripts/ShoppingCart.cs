@@ -74,7 +74,16 @@ public class ShoppingCart : MonoBehaviour
             cart.Add(temp);
 
             chosenProductAmount = 0;
+
+            ResetDisplay();
         }
+    }
+
+    public void ResetDisplay()
+    {
+        chosenProduct = null;
+        chosenProductImage.sprite = null;
+        chosenProductPriceText.text = ("Price: ");
     }
 }
 
