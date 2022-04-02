@@ -4,21 +4,9 @@ using UnityEngine;
 
 public class WindAnim : MonoBehaviour
 {
-    Animator anim;
-
     public Transform p1, p2;
 
     public GameObject container;
-
-    void Start()
-    {
-        //anim = GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-        
-    }
 
     public void ChooseNewPos()
     {
