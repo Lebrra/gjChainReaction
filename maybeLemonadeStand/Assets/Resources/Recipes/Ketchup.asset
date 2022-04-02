@@ -16,4 +16,5 @@ MonoBehaviour:
   sprite: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: 3d2a60912fbd9bb4196c41f98514db00, type: 2}
+  - {fileID: 11400000, guid: 9b04b36d220078c458ec482b92ca0da1, type: 2}
   quanity: 0
