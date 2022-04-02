@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeatherMan : MonoBehaviour
+public class TruckUpgrades : MonoBehaviour
 {
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +17,11 @@ public class WeatherMan : MonoBehaviour
     }
 }
 
-public enum Weather
+public enum Upgrade
 {
-    Sun,
-    Rain,
-    Wind,
-    Snow
+    None,
+    Grill,
+    Fryer,
+    Blender,
+    Freezer
 }

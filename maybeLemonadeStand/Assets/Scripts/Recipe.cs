@@ -9,6 +9,23 @@ public class Recipe : ScriptableObject
     public Sprite sprite;
     public List<Ingredient> ingredients;
 
-    [Tooltip("How long will this product last?")]
-    public float quanity;
+    public Upgrade requiredAppliance;
+
+    public float sunRate;
+    public float rainRate;
+    public float windRate;
+    public float snowRate;
+
+    public float GetWeatherPercent(Weather weather)
+    {
+        switch (weather)
+        {
+            case Weather.Sun: return sunRate;
+            case Weather.Rain: return rainRate;
+            case Weather.Wind: return windRate;
+            case Weather.Snow: return snowRate;
+        }
+
+        return 7F;
+    }
 }
