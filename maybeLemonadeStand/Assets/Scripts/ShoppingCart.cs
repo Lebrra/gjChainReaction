@@ -162,7 +162,7 @@ public class ShoppingCart : MonoBehaviour
             GameObject prefab = Instantiate(shopProductPrefab, shopContent);
             prefab.GetComponent<ProductLoader>().LoadUI(item, this);
 
-            uiCardItems.Add(prefab);
+            //uiCardItems.Add(prefab);
         }
     }
 }
