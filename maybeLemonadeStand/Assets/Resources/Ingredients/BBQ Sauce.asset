@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BBQ Sauce
   m_EditorClassIdentifier: 
   buyPrice: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: d0e6245ef9605eb40b8b47cba98ac1db, type: 3}
