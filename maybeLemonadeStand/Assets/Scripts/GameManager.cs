@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Data")]
     public float bank = 7F;
     public int dayCounter = 7;
+    public string truckName = "Seven";
 
     private void Awake()
     {
