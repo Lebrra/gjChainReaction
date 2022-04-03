@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7b7b7e419f7b540989c9fa768083d3, type: 3}
   m_Name: Coffee
   m_EditorClassIdentifier: 
-  sellPrice: 4
+  sellPrice: 5
   sprite: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: a444b5609964dc441b462b77f86ec17c, type: 2}
+  - {fileID: 11400000, guid: 9b04b36d220078c458ec482b92ca0da1, type: 2}
   requiredAppliance: 0
   sunRate: 0.5
   rainRate: 1.2

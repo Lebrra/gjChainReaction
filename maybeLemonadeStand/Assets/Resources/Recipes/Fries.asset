@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fries
   m_EditorClassIdentifier: 
   sellPrice: 5
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 0ca046e80c9cf064bae908843e1bd929, type: 3}
   ingredients:
   - {fileID: 11400000, guid: bcad7e715d32266448b34d1f40d6be74, type: 2}
   - {fileID: 11400000, guid: ece7044411d2f7442a26a0da416f3825, type: 2}

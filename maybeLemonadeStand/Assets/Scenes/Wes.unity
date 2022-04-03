@@ -3552,6 +3552,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1414645112395410041, guid: b1b7a12b6e2ab0e45b499478fd2ecb55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.388916
+      objectReference: {fileID: 0}
     - target: {fileID: 2102565170129780173, guid: b1b7a12b6e2ab0e45b499478fd2ecb55, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4847,6 +4851,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+--- !u!1 &1094689441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 350599218178116428, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+  m_PrefabInstance: {fileID: 1094689440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1094689442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8974713938587346688, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+  m_PrefabInstance: {fileID: 1094689440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1094689443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7134312763477409014, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+  m_PrefabInstance: {fileID: 1094689440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1094689444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6243192270957638230, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+  m_PrefabInstance: {fileID: 1094689440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1094689445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094689444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502043f97af8e304ab34f390fb57be4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rain: {fileID: 1094689443}
+  wind: {fileID: 1094689441}
+  snow: {fileID: 1094689442}
 --- !u!1 &1110249516
 GameObject:
   m_ObjectHideFlags: 0
@@ -10036,6 +10075,7 @@ MonoBehaviour:
   shoppingSystem: {fileID: 192707340}
   menuSystem: {fileID: 1292172320}
   truck: {fileID: 991831562}
+  weatherFx: {fileID: 0}
   endDayPanel: {fileID: 2040719842}
   OnBankChanged:
     m_PersistentCalls:
