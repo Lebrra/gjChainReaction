@@ -213,6 +213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6243192270092786499, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6243192270920809148, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
       propertyPath: m_Name
       value: Truck Lyfe
@@ -265,5 +269,17 @@ PrefabInstance:
       propertyPath: amountOfCust
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6243192271366382788, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243192271366382788, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243192271366382791, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb6e49a0a96c32e48b2a9145dbd40696, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9785a548e2bb0a74db0bffa72d0edb70, type: 3}
