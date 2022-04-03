@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac2f84631bb67046963a63bc9c68441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipeSprite: {fileID: 1386931522342483030}
+  recipeSprite: {fileID: 1176074429856688501}
   titleText: {fileID: 4489077184983240411}
   ingredientText: {fileID: 1919581464861510118}
   toggleImg: {fileID: 2655036034434652501}
