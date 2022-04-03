@@ -70,6 +70,33 @@ public static class WeatherMan
     {
         int currTemp = 7;
 
+        switch (s)
+        {
+            //SPRING
+            case Season.Spring:
+                currTemp = Random.Range(32, 70);
+                break;
+
+            //SUMMER
+            case Season.Summer:
+                currTemp = Random.Range(55, 82);
+                break;
+
+            //FALL
+            case Season.Fall:
+                currTemp = Random.Range(30, 62);
+                break;
+
+            //WINTER
+            case Season.Winter:
+                currTemp = Random.Range(10, 31);
+                break;
+
+            default:
+                currTemp = 7;
+                break;
+        }
+
         return currTemp;
     }
 }
