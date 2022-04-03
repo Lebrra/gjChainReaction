@@ -366,6 +366,7 @@ MonoBehaviour:
   truckAnim: {fileID: 6243192270966129285}
   customer: {fileID: 6243192270092786499}
   amountOfCust: 1
+  customerOn: 0
 --- !u!1 &6243192271366382789
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 6243192271366382789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.7, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 6243192270092786498}
   m_RootOrder: 0
@@ -438,8 +439,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -989583009919250175, guid: 6eeaca810f06335418e058687bf72d67, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
