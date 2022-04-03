@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fried Chicken
   m_EditorClassIdentifier: 
   sellPrice: 9
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 0e7b1e9d3053ee848b1c144f762d058b, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 4a324a772061aaf45b735b62fda883d9, type: 2}
   - {fileID: 11400000, guid: 6a4cb64293dc3444f9c2eaf1ba2a1c34, type: 2}
