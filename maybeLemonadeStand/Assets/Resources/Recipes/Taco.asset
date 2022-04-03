@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Taco
   m_EditorClassIdentifier: 
   sellPrice: 10
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 5cec76f6481f3884aa257508fb3e61af, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 8f9952e6bef07d6479e771cc9bc6631a, type: 2}
   - {fileID: 11400000, guid: 65a14952a8257f24eabc956f6cdf8fbb, type: 2}

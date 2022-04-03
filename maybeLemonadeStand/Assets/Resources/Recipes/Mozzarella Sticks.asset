@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mozzarella Sticks
   m_EditorClassIdentifier: 
   sellPrice: 8
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 93f86b576dee682469a947af8432865a, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 1cf87bf3f2f670842bc84909bbc2dd22, type: 2}
   - {fileID: 11400000, guid: 6a4cb64293dc3444f9c2eaf1ba2a1c34, type: 2}

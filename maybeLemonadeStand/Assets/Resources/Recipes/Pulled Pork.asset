@@ -19,6 +19,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: acbbf0b59fb63e84291ad688b923d4d6, type: 2}
   requiredAppliance: 0
   sunRate: 2
-  rainRate: 1
+  rainRate: 0.8
   windRate: 1
   snowRate: 0.5

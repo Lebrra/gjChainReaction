@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coffee
   m_EditorClassIdentifier: 
   sellPrice: 5
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: d32a4c4051ff60a439350b79c0c93ace, type: 3}
   ingredients:
   - {fileID: 11400000, guid: a444b5609964dc441b462b77f86ec17c, type: 2}
   - {fileID: 11400000, guid: 9b04b36d220078c458ec482b92ca0da1, type: 2}
