@@ -7,14 +7,9 @@ public class TruckName : MonoBehaviour
 {
     TextMeshPro truckName;
 
-    private void Start()
-    {
-        truckName = GetComponent<TextMeshPro>();
-        //truckName.text = GameManager.instance.truckName;
-    }
-
     public void SetTruckName()
     {
+        truckName = GetComponent<TextMeshPro>();
         truckName.text = GameManager.instance.truckName;
     }
 }

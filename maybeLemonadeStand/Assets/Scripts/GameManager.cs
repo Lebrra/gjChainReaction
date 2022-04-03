@@ -136,12 +136,12 @@ public class GameManager : MonoBehaviour
         if(gameData != null)
         {
             bank = gameData.bank;
-            dayCounter = gameData.dayCounter;
+            dayCounter = gameData.dayCounter + 1;
             truckName = gameData.truckName;
-
-            FindObjectOfType<TruckName>(true).SetTruckName();
         }
 
+        if(PlayerPrefs.HasKey("truckName")) truckName = PlayerPrefs.GetString("truckName");
+        FindObjectOfType<TruckName>(true).SetTruckName();
     }
 
     public void ReloadDataJSON()
