@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f9952e6bef07d6479e771cc9bc6631a, type: 2}
   - {fileID: 11400000, guid: 2f8ca65123012874e9a4e9096c231c68, type: 2}
   - {fileID: 11400000, guid: b184aef14595117408c94a380d2e1e0f, type: 2}
+  - {fileID: 11400000, guid: 0ba5d20202ac64642acad85b6a86a888, type: 2}
   requiredAppliance: 1
   sunRate: 1.2
   rainRate: 1

@@ -10649,7 +10649,7 @@ MonoBehaviour:
   shoppingSystem: {fileID: 192707340}
   menuSystem: {fileID: 1292172320}
   truck: {fileID: 991831562}
-  weatherFx: {fileID: 0}
+  weatherFx: {fileID: 1094689445}
   endDayPanel: {fileID: 2040719842}
   OnBankChanged:
     m_PersistentCalls:

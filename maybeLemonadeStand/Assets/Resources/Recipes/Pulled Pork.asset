@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pulled Pork
   m_EditorClassIdentifier: 
   sellPrice: 11
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 818f8cf4e214a0343970db8c12c31ce6, type: 3}
   ingredients:
   - {fileID: 11400000, guid: 6ec116e0727f9b241a0b3934f2f85a69, type: 2}
   - {fileID: 11400000, guid: acbbf0b59fb63e84291ad688b923d4d6, type: 2}
