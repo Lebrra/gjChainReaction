@@ -23,5 +23,7 @@ public enum Upgrade
     Grill,
     Fryer,
     Blender,
-    Freezer
+    Freezer,
+    Smoker,
+    CoffeePot
 }

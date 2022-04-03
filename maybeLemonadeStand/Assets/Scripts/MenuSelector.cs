@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuSelector : MonoBehaviour
 {
-    public List<UnityEngine.UI.Toggle> allToggles;
+    public List<Toggle> allToggles;
     List<Recipe> menuList;
     List<CartItem> ingredientListInst;
 
@@ -13,11 +14,14 @@ public class MenuSelector : MonoBehaviour
     public GameObject recipePrefUI;
     public Transform container;
 
+    public Button bigGoButton;
+
     private void OnEnable()
     {
         if (hasLoaded) return;
         else LoadRecipeUI();
         menuList = new List<Recipe>();
+        bigGoButton.interactable = false;
     }
 
     public void GetIngredientList(List<CartItem> items)
@@ -29,7 +33,7 @@ public class MenuSelector : MonoBehaviour
 
     void LoadRecipeUI()
     {
-        allToggles = new List<UnityEngine.UI.Toggle>();
+        allToggles = new List<Toggle>();
 
         foreach (var recipe in RecipeLogic.GetRecipeList())
         {
@@ -112,6 +116,7 @@ public class MenuSelector : MonoBehaviour
             }
         }
         menuList.Add(recipe);
+        bigGoButton.interactable = true;
     }
 
     void AddPurchasedIngredients(Recipe recipe)
@@ -134,5 +139,11 @@ public class MenuSelector : MonoBehaviour
             }
         }
         menuList.Remove(recipe);
+        if (menuList.Count == 0) bigGoButton.interactable = false;
+    }
+
+    public void FinalizeMenu()
+    {
+
     }
 }
