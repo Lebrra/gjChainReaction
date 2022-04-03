@@ -30,6 +30,10 @@ public class Bob : MonoBehaviour
             this.gameObject.GetComponent<Animator>().SetTrigger("Restart");
             Invoke("ShowBob", .31f);
         }
+        else
+        {
+            t.TruckLeave();
+        }
     }
 
     public void ShowBob()

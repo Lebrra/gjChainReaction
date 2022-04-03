@@ -19,12 +19,6 @@ public class TruckHandler : MonoBehaviour
         amountOfCust = 0;
     }
 
-    private void Update()
-    {
-        if (amountOfCust >= 3)
-            TruckLeave();
-    }
-
     public void TruckEnter()
     {
         truckAnim.gameObject.SetActive(true);
@@ -33,7 +27,7 @@ public class TruckHandler : MonoBehaviour
     public void TruckLeave()
     {
         truckAnim.SetTrigger("Leave");
-        amountOfCust = 0;
+        amountOfCust = -1;
     }
 
     public void CustomerEnter()

@@ -65,6 +65,13 @@ public static class WeatherMan
 
         return currentWeather;
     }
+
+    public static int GetTemperature(Season s)
+    {
+        int currTemp = 7;
+
+        return currTemp;
+    }
 }
 
 public enum Weather
