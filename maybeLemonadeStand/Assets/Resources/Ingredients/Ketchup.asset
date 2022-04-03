@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f48f140386c940a7d4fc9cc0b7264, type: 3}
   m_Name: Ketchup
   m_EditorClassIdentifier: 
-  buyPrice: 0
+  buyPrice: 0.5
   sprite: {fileID: 21300000, guid: 5139dfc3c7e512a49828d56e374a68a6, type: 3}

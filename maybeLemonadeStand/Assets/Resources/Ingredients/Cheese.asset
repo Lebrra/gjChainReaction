@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f48f140386c940a7d4fc9cc0b7264, type: 3}
   m_Name: Cheese
   m_EditorClassIdentifier: 
-  buyPrice: 0
+  buyPrice: 2
   sprite: {fileID: 21300000, guid: 036230f0e2fab134a8de538d800ff3d1, type: 3}

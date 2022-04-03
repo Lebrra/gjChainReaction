@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f48f140386c940a7d4fc9cc0b7264, type: 3}
   m_Name: Sugar
   m_EditorClassIdentifier: 
-  buyPrice: 1
+  buyPrice: 0.5
   sprite: {fileID: 21300000, guid: c69d8ccd4ac750349ab4723049c4ff09, type: 3}

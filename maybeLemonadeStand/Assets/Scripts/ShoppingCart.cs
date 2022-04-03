@@ -31,12 +31,18 @@ public class ShoppingCart : MonoBehaviour
 
     public Ingredient chosenProduct;
 
+    private float activeProductPrice;
+
+    private float currentBank;
+
     public float totalAmount = 7;
 
     private void Start()
     {
         chosenProductAmount = 0;
         totalAmount = 0;
+
+        currentBank = GameManager.instance.bank;
 
         //SetUpShop();
     }
@@ -50,16 +56,21 @@ public class ShoppingCart : MonoBehaviour
 
     public void DisplayItem(Ingredient ingredient)
     {
-        chosenProduct = ingredient;
-        chosenProductImage.gameObject.SetActive(true);
-        chosenProductImage.sprite = ingredient.sprite;
-        chosenProductPriceText.text = ("Price: $" + ingredient.buyPrice.ToString() + " ea.");
-        chosenProductAmount = 1;
+        activeProductPrice = ingredient.buyPrice;
+
+        if (currentBank >= ingredient.buyPrice) {
+            chosenProduct = ingredient;
+            chosenProductImage.gameObject.SetActive(true);
+            chosenProductImage.sprite = ingredient.sprite;
+            chosenProductPriceText.text = ("Price: $" + ingredient.buyPrice.ToString() + " ea.");
+            chosenProductAmount = 1;
+        }
     }
 
     public void AddOneToCart()
     {
-        chosenProductAmount++;
+        if(currentBank >= activeProductPrice * (chosenProductAmount + 1))
+            chosenProductAmount++;
     }
 
     public void RemoveOneFromCart()
@@ -92,6 +103,8 @@ public class ShoppingCart : MonoBehaviour
             }
 
             cart.Add(temp);
+
+            currentBank -= (chosenProduct.buyPrice * (float)chosenProductAmount);
 
             chosenProductAmount = 0;
 
@@ -137,6 +150,7 @@ public class ShoppingCart : MonoBehaviour
 
     public void NotTheBestWayToDoThis()
     {
+        currentBank = GameManager.instance.bank;
         receiptObject.SetActive(false);
         shopObject.SetActive(true);
 
@@ -153,7 +167,6 @@ public class ShoppingCart : MonoBehaviour
     public void FinalizePurchase()
     {
         GameManager.instance.SendPurchases(totalAmount, cart);
-        //STUFF
     }
 
     public void SetUpShop()

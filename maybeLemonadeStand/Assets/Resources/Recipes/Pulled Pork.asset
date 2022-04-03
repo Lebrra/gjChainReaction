@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7b7b7e419f7b540989c9fa768083d3, type: 3}
   m_Name: Pulled Pork
   m_EditorClassIdentifier: 
-  sellPrice: 0
+  sellPrice: 11
   sprite: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: 6ec116e0727f9b241a0b3934f2f85a69, type: 2}

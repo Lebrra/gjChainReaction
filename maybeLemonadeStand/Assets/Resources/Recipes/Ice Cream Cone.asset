@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7b7b7e419f7b540989c9fa768083d3, type: 3}
   m_Name: Ice Cream Cone
   m_EditorClassIdentifier: 
-  sellPrice: 0
+  sellPrice: 6
   sprite: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: 3bfb8b01d68fa87448e6cf89f4e766d8, type: 2}

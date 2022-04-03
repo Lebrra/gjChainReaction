@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7b7b7e419f7b540989c9fa768083d3, type: 3}
   m_Name: Fries
   m_EditorClassIdentifier: 
-  sellPrice: 0
+  sellPrice: 5
   sprite: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: bcad7e715d32266448b34d1f40d6be74, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7b7b7e419f7b540989c9fa768083d3, type: 3}
   m_Name: Grilled Cheese
   m_EditorClassIdentifier: 
-  sellPrice: 0
+  sellPrice: 6
   sprite: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: 2f8ca65123012874e9a4e9096c231c68, type: 2}
