@@ -48,11 +48,20 @@ public static class JSONEditor
 [System.Serializable]
 public class SaveData
 {
+    public float bank = 7F;
+    public int dayCounter = 1;
     public string truckName = "Seven";
 
     public SaveData()
     {
         // nothing
+    }
+
+    public SaveData(float money, int day, string truck)
+    {
+        bank = money;
+        dayCounter = day;
+        truckName = truck;
     }
 }
 

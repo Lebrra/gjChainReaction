@@ -15,7 +15,7 @@ public static class IngredientLogic
         return datalist.allRecipes;
     }
 
-    static List<Ingredient> GenerateDatalistJSON()
+    public static List<Ingredient> GenerateDatalistJSON()
     {
         Debug.Log("Reloading Ingredients...");
 

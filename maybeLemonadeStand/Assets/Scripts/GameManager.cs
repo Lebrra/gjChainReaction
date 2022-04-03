@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
         if (instance) Destroy(gameObject);
         else instance = this;
 
+        // reload jsons
+        ReloadDataJSON();
+
+        LoadSaveData();
         StartNewDay();
     }
 
@@ -115,8 +119,37 @@ public class GameManager : MonoBehaviour
 
     public void SaveThisDay()
     {
-        // save
+        SaveGameData();
         dayCounter++;
         ScreenFader.instance.ScreenFade(StartNewDay);
+    }
+
+    public void SaveGameData()
+    {
+        var gameData = new SaveData(bank, dayCounter, truckName);
+        JSONEditor.DataToJSON(gameData, "gameData");
+    }
+
+    public void LoadSaveData()
+    {
+        var gameData = JSONEditor.JSONToData<SaveData>("gameData");
+        if(gameData != null)
+        {
+            bank = gameData.bank;
+            dayCounter = gameData.dayCounter;
+            truckName = gameData.truckName;
+
+            FindObjectOfType<TruckName>(true).SetTruckName();
+        }
+
+    }
+
+    public void ReloadDataJSON()
+    {
+        JSONEditor.DeleteData("RecipeDatalist");
+        JSONEditor.DeleteData("IngredientDatalist");
+
+        RecipeLogic.GetRecipeList();
+        IngredientLogic.GetIngredientList();
     }
 }
