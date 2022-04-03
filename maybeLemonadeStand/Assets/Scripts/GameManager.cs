@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public ShoppingCart shoppingSystem;
     public MenuSelector menuSystem;
     public GameObject truck;
+    public ParticleHandler weatherFx;
     public EndDayReport endDayPanel;
 
     [HideInInspector]
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     void ToTruckTransition()
     {
+        weatherFx.TurnOnWeatherFx(todaysForecast);
         menuSystem.gameObject.SetActive(false);
         mainMenuPanel.SetActive(false);
     }
@@ -100,6 +102,7 @@ public class GameManager : MonoBehaviour
     public void EndDay()
     {
         truck.SetActive(false);
+        weatherFx.ResetAllWeather();
         endDayPanel.gameObject.SetActive(true);
         endDayPanel.LoadEndDay(menuList, todaysForecast, moneySpent);
     }
