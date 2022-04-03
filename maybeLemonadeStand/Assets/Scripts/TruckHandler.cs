@@ -11,6 +11,8 @@ public class TruckHandler : MonoBehaviour
 
     public int amountOfCust = 0;
 
+    public bool customerOn = false;
+
     void Start()
     {
         customerHolderAnim.gameObject.SetActive(false);
@@ -31,6 +33,7 @@ public class TruckHandler : MonoBehaviour
     public void TruckLeave()
     {
         truckAnim.SetTrigger("Leave");
+        amountOfCust = 0;
     }
 
     public void CustomerEnter()
@@ -40,6 +43,27 @@ public class TruckHandler : MonoBehaviour
 
     public void TurnOnCustomer()
     {
-        customer.SetActive(true);
+        if (!customerOn)
+        {
+            customer.SetActive(true);
+            customerOn = true;
+        }
+
+        else if (customerOn)
+        {
+            customer.GetComponent<Bob>().ResetCustomer();
+        }
+    }
+    
+    public void TruckReset()
+    {
+        truckAnim.gameObject.SetActive(false);
+        truckAnim.gameObject.SetActive(true);
+    }
+
+    public void BringBackCust()
+    {
+        if(customerOn)
+            customer.GetComponent<Bob>().ResetCustomer();
     }
 }
