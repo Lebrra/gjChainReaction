@@ -37,10 +37,29 @@ public class CalendarLoader : MonoBehaviour
         seasonTxt.text = date.season.ToString();
 
         // get temp and weather from WeatherMan
+        var weather = WeatherMan.GetForcast(date.season);
+        var temp = WeatherMan.GetTemperature(date.season);
+
+        tempTxt.text = temp.ToString();
     }
 
     Sprite WeatherToSprite(Weather weather)
     {
+        switch (weather)
+        {
+            case Weather.Sun:
+                weatherImg.sprite = weatherSprites[0];
+                break;
+            case Weather.Rain:
+                weatherImg.sprite = weatherSprites[1];
+                break;
+            case Weather.Wind:
+                weatherImg.sprite = weatherSprites[2];
+                break;
+            case Weather.Snow:
+                weatherImg.sprite = weatherSprites[3];
+                break;
+        }
         return null;
     }
 }
