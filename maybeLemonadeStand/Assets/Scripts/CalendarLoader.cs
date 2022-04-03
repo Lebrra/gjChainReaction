@@ -41,6 +41,7 @@ public class CalendarLoader : MonoBehaviour
         var temp = WeatherMan.GetTemperature(date.season);
 
         tempTxt.text = temp.ToString();
+        WeatherToSprite(weather);
     }
 
     Sprite WeatherToSprite(Weather weather)
