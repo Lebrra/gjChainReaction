@@ -11,12 +11,14 @@ public class GameManager : MonoBehaviour
     public Weather todaysForecast;
     public List<CartItem> purchasedIngredients;
     public List<Recipe> menuList;
-    float earnings = 7F;
+    float moneySpent = 7f;
 
     [Header("Day Menu Systems")]
     public GameObject mainMenuPanel;
     public ShoppingCart shoppingSystem;
     public MenuSelector menuSystem;
+    public GameObject truck;
+    public EndDayReport endDayPanel;
 
     [HideInInspector]
     public UnityEvent OnBankChanged;
@@ -25,7 +27,7 @@ public class GameManager : MonoBehaviour
     public float bank = 7F;
     public int dayCounter = 7;
     public string truckName = "Seven";
-    public List<Upgrade> unlockedUpgrades;
+    //public List<Upgrade> unlockedUpgrades;
 
     private void Awake()
     {
@@ -33,14 +35,11 @@ public class GameManager : MonoBehaviour
         else instance = this;
 
         StartNewDay();
-
-        Debug.Log(Calendar.DateToString(Calendar.GetDate(1700)));
-        Debug.Log(Calendar.DateToString(Calendar.GetDate(45)));
-        Debug.Log(Calendar.DateToString(Calendar.GetDate(4)));
     }
 
     public void StartNewDay()
     {
+        endDayPanel.gameObject.SetActive(false);
         todaysForecast = WeatherMan.GetForcast(Calendar.GetSeason(dayCounter));
         mainMenuPanel.SetActive(true);
 
@@ -51,6 +50,7 @@ public class GameManager : MonoBehaviour
     public void SendPurchases(float cost, List<CartItem> cart)
     {
         // money stuff
+        moneySpent = cost;
         bank -= cost;
         OnBankChanged.Invoke();
 
@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         if (ScreenFader.instance)
         {
-            ScreenFader.instance.ScreenFade(ToTruckTransition);
+            ScreenFader.instance.ScreenFade(ToTruckTransition, EnableTruck);
         }
         else ToTruckTransition();
         // start animation here
@@ -89,10 +89,31 @@ public class GameManager : MonoBehaviour
     void ToTruckTransition()
     {
         menuSystem.gameObject.SetActive(false);
-        earnings = MoneyLogic.GetDailyEarnings(menuList, todaysForecast);
-        bank += earnings;
-        Debug.Log("MAKING BANK: " + bank);
-        OnBankChanged.Invoke();
         mainMenuPanel.SetActive(false);
+    }
+
+    void EnableTruck()
+    {
+        truck.SetActive(true);
+    }
+
+    public void EndDay()
+    {
+        truck.SetActive(false);
+        endDayPanel.gameObject.SetActive(true);
+        endDayPanel.LoadEndDay(menuList, todaysForecast, moneySpent);
+    }
+
+    public void AddToBank(float amount)
+    {
+        bank += amount;
+        OnBankChanged.Invoke();
+    }
+
+    public void SaveThisDay()
+    {
+        // save
+        dayCounter++;
+        ScreenFader.instance.ScreenFade(StartNewDay);
     }
 }

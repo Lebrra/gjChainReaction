@@ -7,13 +7,13 @@ public static class MoneyLogic
     /// <summary>
     /// Generates total income from each menu item with weather modifiers
     /// </summary>
-   public static float GetDailyEarnings(List<Recipe> menu, Weather forcast)
+   public static List<float> GetDailyEarnings(List<Recipe> menu, Weather forcast)
     {
-        float totalEarnings = 0F;
+        List<float> totalEarnings = new List<float>();
         
         foreach(var item in menu)
         {
-            totalEarnings += (item.sellPrice * item.GetWeatherPercent(forcast));
+            totalEarnings.Add(item.sellPrice * item.GetWeatherPercent(forcast));
         }
 
         return totalEarnings;

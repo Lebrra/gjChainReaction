@@ -18,7 +18,8 @@ public class ScreenFader : MonoBehaviour
     }
 
     /// <summary>
-    /// postActions occur while the screen is black
+    /// duringBlackActions occur while the screen is black
+    /// postActions occur after the fade is done
     /// </summary>
     public void ScreenFade(Action duringBlackActions = null, Action postActions = null)
     {

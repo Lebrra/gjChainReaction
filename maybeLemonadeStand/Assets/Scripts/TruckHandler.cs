@@ -13,10 +13,17 @@ public class TruckHandler : MonoBehaviour
 
     public bool customerOn = false;
 
+    public Animator sky;
+
     void Start()
     {
         customerHolderAnim.gameObject.SetActive(false);
         amountOfCust = 0;
+    }
+
+    private void OnEnable()
+    {
+        sky?.SetTrigger("StartDay");
     }
 
     public void TruckEnter()
@@ -48,16 +55,15 @@ public class TruckHandler : MonoBehaviour
             customer.GetComponent<Bob>().ResetCustomer();
         }
     }
-    
-    public void TruckReset()
-    {
-        truckAnim.gameObject.SetActive(false);
-        truckAnim.gameObject.SetActive(true);
-    }
 
     public void BringBackCust()
     {
         if(customerOn)
             customer.GetComponent<Bob>().ResetCustomer();
+    }
+
+    public void EndTruckScene()
+    {
+        ScreenFader.instance?.ScreenFade(GameManager.instance.EndDay);
     }
 }

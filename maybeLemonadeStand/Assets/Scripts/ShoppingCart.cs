@@ -37,15 +37,7 @@ public class ShoppingCart : MonoBehaviour
 
     public float totalAmount = 7;
 
-    private void Start()
-    {
-        chosenProductAmount = 0;
-        totalAmount = 0;
-
-        currentBank = GameManager.instance.bank;
-
-        //SetUpShop();
-    }
+    bool setup = false;
 
     private void Update()
     {
@@ -171,6 +163,13 @@ public class ShoppingCart : MonoBehaviour
 
     public void SetUpShop()
     {
+        chosenProductAmount = 0;
+        totalAmount = 0;
+
+        currentBank = GameManager.instance.bank;
+
+        if (setup) return;
+
         List<Ingredient> temp = IngredientLogic.GetIngredientList();
 
         foreach (Ingredient item in temp)
@@ -180,6 +179,7 @@ public class ShoppingCart : MonoBehaviour
 
             //uiCardItems.Add(prefab);
         }
+        setup = true;
     }
 }
 
