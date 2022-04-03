@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour
@@ -11,12 +9,19 @@ public class MenuManager : MonoBehaviour
     public GameObject calandarPanel;
     public GameObject settingsPanel;
 
+    public TMPro.TextMeshProUGUI bankText;
+
     private void Start()
     {
         CloseAll();
+        if (GameManager.instance)
+        {
+            GameManager.instance.OnBankChanged.AddListener(UpdateBankUI);
+            UpdateBankUI();
+        }
     }
 
-    public void OpenRecipePanel()
+        public void OpenRecipePanel()
     {
         CloseAll();
         closeButton.SetActive(true);
@@ -52,5 +57,10 @@ public class MenuManager : MonoBehaviour
         settingsPanel.SetActive(false);
 
         closeButton.SetActive(false);
+    }
+
+    public void UpdateBankUI()
+    {
+        bankText.text = "$" + GameManager.instance.bank.ToString();
     }
 }

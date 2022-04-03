@@ -98,12 +98,12 @@ public class MenuSelector : MonoBehaviour
 
     void RemovePurchasedIngredients(Recipe recipe)
     {
-        foreach(var ingredient in recipe.ingredients)
+        foreach (var ingredient in recipe.ingredients)
         {
             // find ingredient in cart & remove
-            foreach(var cartItem in ingredientListInst)
+            foreach (var cartItem in ingredientListInst)
             {
-                if(cartItem.ingredient == ingredient)
+                if (cartItem.ingredient == ingredient)
                 {
                     int count = cartItem.amount - 1;
                     ingredientListInst.Remove(cartItem);
@@ -144,6 +144,10 @@ public class MenuSelector : MonoBehaviour
 
     public void FinalizeMenu()
     {
-
+        if (menuList.Count > 0)
+        {
+            GameManager.instance?.SendMenu(menuList);
+            menuList = new List<Recipe>();
+        }
     }
 }
