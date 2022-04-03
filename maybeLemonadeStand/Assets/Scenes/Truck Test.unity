@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465267095}
   - component: {fileID: 465267096}
+  - component: {fileID: 465267097}
   m_Layer: 0
   m_Name: People Holder
   m_TagString: Untagged
@@ -240,6 +241,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &465267097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465267094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156baae81def4314b8132d1c51c6667a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1470289427}
+  obj: {fileID: 1470289424}
+  t: {fileID: 1334161490}
 --- !u!1 &649478717
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334161489}
   - component: {fileID: 1334161488}
+  - component: {fileID: 1334161490}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -534,6 +551,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334161490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334161487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4962bd9c43694e4d90899f456ab42c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerHolderAnim: {fileID: 465267096}
+  truckAnim: {fileID: 1334161488}
+  customer: {fileID: 465267094}
+  amountOfCust: 1
 --- !u!1 &1470289424
 GameObject:
   m_ObjectHideFlags: 0

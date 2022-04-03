@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class TruckHandler : MonoBehaviour
 {
-    public Animator cutomerAnim;
+    public Animator customerHolderAnim;
     public Animator truckAnim;
 
-    // Start is called before the first frame update
+    public GameObject customer;
+
+    public int amountOfCust = 0;
+
     void Start()
     {
-        
+        customerHolderAnim.gameObject.SetActive(false);
+        amountOfCust = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (amountOfCust >= 3)
+            TruckLeave();
     }
 
     public void TruckEnter()
@@ -27,5 +31,15 @@ public class TruckHandler : MonoBehaviour
     public void TruckLeave()
     {
         truckAnim.SetTrigger("Leave");
+    }
+
+    public void CustomerEnter()
+    {
+        customerHolderAnim.gameObject.SetActive(true);
+    }
+
+    public void TurnOnCustomer()
+    {
+        customer.SetActive(true);
     }
 }
