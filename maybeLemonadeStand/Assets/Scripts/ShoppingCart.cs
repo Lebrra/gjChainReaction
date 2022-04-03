@@ -168,6 +168,8 @@ public class ShoppingCart : MonoBehaviour
 
         currentBank = GameManager.instance.bank;
 
+        NotTheBestWayToDoThis();
+
         if (setup) return;
 
         List<Ingredient> temp = IngredientLogic.GetIngredientList();
