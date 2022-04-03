@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1316160563055328218
 Transform:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.55384254
+          value: 0.092308044
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -315,7 +315,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.35384586
+          value: 0.20000276
           inSlope: 0
           outSlope: 0
           tangentMode: 0
