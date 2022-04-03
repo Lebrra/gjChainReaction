@@ -52,4 +52,10 @@ public class GameManager : MonoBehaviour
         menuSystem.gameObject.SetActive(true);
         menuSystem.GetIngredientList(purchasedIngredients);
     }
+
+    public void SendMenu(List<Recipe> menu)
+    {
+        menuList = new List<Recipe>();
+        foreach (var recipe in menu) menuList.Add(recipe);
+    }
 }
