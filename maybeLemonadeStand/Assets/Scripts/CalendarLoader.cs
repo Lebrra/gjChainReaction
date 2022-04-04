@@ -37,7 +37,7 @@ public class CalendarLoader : MonoBehaviour
         seasonTxt.text = date.season.ToString();
 
         // get temp and weather from WeatherMan
-        var weather = WeatherMan.GetForcast(date.season);
+        var weather = GameManager.instance.todaysForecast;
         var temp = WeatherMan.GetTemperature(date.season);
 
         tempTxt.text = temp.ToString();

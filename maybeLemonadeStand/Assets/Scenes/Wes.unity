@@ -268,7 +268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -505.93503}
+  m_AnchoredPosition: {x: 540, y: -1020.0066}
   m_SizeDelta: {x: 880, y: 87.7773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &79163729
@@ -1663,7 +1663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -769.2669}
+  m_AnchoredPosition: {x: 540, y: -1801.6077}
   m_SizeDelta: {x: 880, y: 87.7773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &373554873
@@ -3158,7 +3158,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8.19
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -3851,6 +3851,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4179895163736289760, guid: b1b7a12b6e2ab0e45b499478fd2ecb55, type: 3}
+      propertyPath: weatherImg
+      value: 
+      objectReference: {fileID: 2065234259}
     - target: {fileID: 4179895163830011685, guid: b1b7a12b6e2ab0e45b499478fd2ecb55, type: 3}
       propertyPath: m_Name
       value: MenuSystem
@@ -5338,7 +5342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -681.4896}
+  m_AnchoredPosition: {x: 540, y: -1626.053}
   m_SizeDelta: {x: 880, y: 87.7773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1179750655
@@ -6543,7 +6547,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8.19
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -8529,7 +8533,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8.19
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -8663,7 +8667,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8.19
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -10404,7 +10408,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8.19
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -10436,6 +10440,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2065234259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8196050639051971219, guid: b1b7a12b6e2ab0e45b499478fd2ecb55, type: 3}
+  m_PrefabInstance: {fileID: 904005113}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2080883288
 GameObject:
   m_ObjectHideFlags: 0
@@ -10505,7 +10520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -593.71234}
+  m_AnchoredPosition: {x: 540, y: -1195.5613}
   m_SizeDelta: {x: 880, y: 87.7773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2108578784

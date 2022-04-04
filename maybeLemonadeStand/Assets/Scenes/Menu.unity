@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Truck Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 848d27a262bb8434dac6b3630c7ad5f8, type: 2}
   m_sharedMaterial: {fileID: -8358207510458763099, guid: 848d27a262bb8434dac6b3630c7ad5f8, type: 2}
